@@ -3,18 +3,19 @@ import 'package:e_commerce/helper/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   final _formKey = GlobalKey<FormState>();
   final _emailCtrl = TextEditingController();
   final _passwordCtrl = TextEditingController();
   bool _obscure = true;
+  final _nameCtrl = TextEditingController();
 
   final _emailRegex = RegExp(
     r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$',
@@ -29,6 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
   void dispose() {
     _emailCtrl.dispose();
     _passwordCtrl.dispose();
+    _nameCtrl.dispose();
     super.dispose();
   }
 
@@ -57,6 +59,35 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
+              const SizedBox(height: 15),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                child: TextFormField(
+                  controller: _nameCtrl,
+                  keyboardType: TextInputType.name,
+                  textInputAction: TextInputAction.next,
+                  decoration: InputDecoration(
+                    hintText: "Name ",
+                    hintStyle: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.second,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  validator: (value) {
+                    final v = value?.trim() ?? '';
+                    if (v.isEmpty) return "Name is required";
+                    if (v.length < 4) {
+                      return "Name must be at least 4 characters";
+                    }
+                    return null;
+                  },
+                ),
+              ),
+
               const SizedBox(height: 15),
 
               // Email
@@ -144,7 +175,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   child: Center(
                     child: Text(
-                      "Login",
+                      "Sign Up",
                       style: TextStyle(
                         fontSize: 16,
                         color: AppColors.background,
@@ -157,7 +188,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 15),
               Center(
                 child: Text(
-                  "Forget password?",
+                  "Have Account",
                   style: TextStyle(color: AppColors.second, fontSize: 14),
                 ),
               ),
@@ -165,10 +196,10 @@ class _LoginScreenState extends State<LoginScreen> {
               Center(
                 child: TextButton(
                   onPressed: () {
-                    context.push('/sign');
+                    context.push('/login');
                   },
                   child: Text(
-                    "Sign Up",
+                    "Login",
                     style: TextStyle(color: AppColors.second, fontSize: 14),
                   ),
                 ),
