@@ -1,16 +1,51 @@
-# e_commerce
+# 🛍️ E-Commerce Clothing App
 
-A new Flutter project.
+A complete **E-Commerce Clothing App** built with Flutter, designed for a clothing store.  
+The app provides a smooth shopping experience with features like authentication, browsing products, searching, cart management, checkout, and user profile.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📽️ Demo Video
+[![Watch the video](https://img.youtube.com/vi/5SZedpbuH6U/maxresdefault.jpg)](https://youtube.com/shorts/5SZedpbuH6U?feature=share)
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## ✨ Features
+- 🔐 **Authentication**: Login & Sign Up with email and password.  
+- 🏠 **Home Page**: Explore available clothing products.  
+- 🔎 **Search**: Find products quickly and easily.  
+- 🛒 **Cart**: Add, remove, and manage items.  
+- 💳 **Payment**: Checkout process with payment option.  
+- 👤 **Profile**: Manage account information.  
+- 👕 **Product Details**: View detailed product information.  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🖼️ Screenshots
+
+### 🔐 Authentication
+<p>
+  <img src="assets/images/login.jpg" alt="Login Screen" width="260">
+  <img src="assets/images/sign_up.jpg" alt="Sign Up Screen" width="260">
+</p>
+
+### 🏠 Home & 🔎 Search
+<p>
+  <img src="assets/images/home_page.jpg" alt="Home Screen" width="260">
+  <img src="assets/images/search.jpg" alt="Search Screen" width="260">
+</p>
+
+### 🛒 Cart & 👕 Product Details
+<p>
+  <img src="assets/images/cart.jpg" alt="Cart Screen" width="260">
+  <img src="assets/images/product_details.jpg" alt="Product Details Screen" width="260">
+</p>
+
+### 👤 Profile
+<p>
+  <img src="assets/images/profile.jpg" alt="Profile Screen" width="260">
+</p>
+
+---
+
+## 🗂️ Project Structure for Images
