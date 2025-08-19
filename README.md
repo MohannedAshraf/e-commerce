@@ -46,6 +46,4 @@ The app provides a smooth shopping experience with features like authentication,
   <img src="assets/images/profile.jpg" alt="Profile Screen" width="260">
 </p>
 
----
 
-## 🗂️ Project Structure for Images
